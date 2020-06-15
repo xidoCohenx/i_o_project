@@ -1,6 +1,7 @@
-package com.example.i_o_spring_project.servise;
+package com.example.i_o_spring_project.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.i_o_spring_project.exceptions.CouponsSystemExceptions;
 import com.example.i_o_spring_project.exceptions.SystemExceptions;
@@ -8,13 +9,14 @@ import com.example.i_o_spring_project.model.Company;
 import com.example.i_o_spring_project.repository.CompanyRepository;
 import com.example.i_o_spring_project.repository.CustomerRepository;
 
-public class AdminServise {
+@Service
+public class AdminService {
 
 	@Autowired
 	private CompanyRepository companyRepository;
 	@Autowired
 	private CustomerRepository customerRepository;
-
+	
 	public boolean login(String email, String password) {
 
 		if (!email.equals("admin@admin.com") && !password.equals("admin")) {

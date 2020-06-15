@@ -13,7 +13,7 @@ import com.example.i_o_spring_project.model.Coupon;
 import com.example.i_o_spring_project.model.Customer;
 import com.example.i_o_spring_project.repository.CategoryRepository;
 import com.example.i_o_spring_project.repository.CompanyRepository;
-import com.example.i_o_spring_project.repository.CouponRpository;
+import com.example.i_o_spring_project.repository.CouponRepository;
 import com.example.i_o_spring_project.repository.CustomerRepository;
 
 @SpringBootApplication
@@ -23,7 +23,7 @@ public class IOSpringProjectApplication {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(IOSpringProjectApplication.class,
 				args);
 		CompanyRepository companyRepository = applicationContext.getBean(CompanyRepository.class);
-		CouponRpository couponRpository = applicationContext.getBean(CouponRpository.class);
+		CouponRepository couponRpository = applicationContext.getBean(CouponRepository.class);
 		CustomerRepository customerRepository = applicationContext.getBean(CustomerRepository.class);
 		CategoryRepository categoryRepository = applicationContext.getBean(CategoryRepository.class);
 		Optional<Company> optionalCompany = companyRepository.findById(6);
